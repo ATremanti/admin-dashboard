@@ -59,6 +59,7 @@ body {
     display: grid;
     grid-template-rows: repeat(6, 50px);
     grid-template-columns: auto;
+    gap: 20px;
     font-size: 1.5rem;
     font-weight: bold;
     justify-content: start;
@@ -77,6 +78,13 @@ body {
 .sb-links {
     display: grid;
     gap: 40px;
+}
+
+.home, .profile, .message, .history, .tasks, .group, .settings, .support, .privacy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
 }
 
 .header {
@@ -118,4 +126,9 @@ body {
 h1 {
     margin: 0;
     font-size: 2em;
+}
+
+#home-icon, #profile-icon, #message-icon, #history-icon, #tasks-icon, #group-icon, #settings-icon, #support-icon, #privacy-icon {
+    fill: white;
+    width: 28px;
 }
