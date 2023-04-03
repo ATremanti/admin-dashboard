@@ -19,6 +19,7 @@ body {
     color: white;
     padding: 30px;
     grid-area: 1 / 1 / 3 / 2;
+    z-index: 1;
 }
 
 .sb-logo-grid {
@@ -87,12 +88,94 @@ body {
     gap: 30px;
 }
 
+.buttons-group {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    background-color: rgb(25, 146, 212);
+    color: white;
+    border-radius: 20px;
+    height: 35px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.profile-icon {
+    background-color: #facc15;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.4em;
+}
+
+.profile-text > h4, .profile-text > h6 {
+    margin: 0;
+}
+
+.profile-greeting {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-self: start;
+}
+
+.profile-main {
+    display: flex;
+    align-items: center;
+    align-self: start;
+    gap: 20px;
+    font-size: 1.1em;
+}
+
+.profile-main > .profile-icon {
+    height: 45px;
+    width: 45px;
+}
+
+.profile-main > p {
+    font-weight: bold;
+}
+
 .header {
-    box-shadow: 0 0 18px #bfbfbf;
+    box-shadow: 0 0 5px 6px rgb(0 0 0 / 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: end;
+    justify-items: end;
+    padding: 20px 60px 20px 60px;
+    z-index: 0;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    align-self: start;
+    justify-self: start;
+}
+
+input {
+    border: none;
+    background-color: #f1f5f9;
+    border-radius: 20px;
+    width: 40vw;
+    height: 30px;
 }
 
 .main-content {
-    background-color: lightgray;
+    background-color: #f1f5f9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,5 +213,10 @@ h1 {
 
 #home-icon, #profile-icon, #message-icon, #history-icon, #tasks-icon, #group-icon, #settings-icon, #support-icon, #privacy-icon {
     fill: white;
+    width: 28px;
+}
+
+#search-icon, #notification-icon {
+    fill: black;
     width: 28px;
 }
