@@ -120,7 +120,7 @@ body {
     font-size: 1.4em;
 }
 
-.profile-text > h4, .profile-text > h6 {
+.profile-text > h4, .profile-text > h6, ul p {
     margin: 0;
 }
 
@@ -181,7 +181,7 @@ input {
     grid-template-columns: repeat(3, auto-fit(200px, 1fr));
     gap: 2rem;
     padding: 20px;
-    
+    overflow: scroll;    
 }
 
 .projects-grid {
@@ -197,7 +197,6 @@ input {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 300px;
-    overflow: auto;
 }
 
 .extras-grid {
@@ -207,12 +206,24 @@ input {
     gap: 2rem;
 }
 
+.extras-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
 .grid-item, .announcements, .trending {
     background-color: white;
     border-left: 10px solid orange;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px;   
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-title {
@@ -225,6 +236,12 @@ input {
     color: rgb(123, 123, 123);
 }
 
+.card-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
 .card-title, .card-content {
     margin: 0;
 }
@@ -234,12 +251,22 @@ h1 {
     font-size: 2em;
 }
 
+ul {
+    list-style-type: none;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+hr, .extras-content {
+    color: rgb(123, 123, 123);
+}
+
 #home-icon, #profile-icon, #message-icon, #history-icon, #tasks-icon, #group-icon, #settings-icon, #support-icon, #privacy-icon {
     fill: white;
     width: 28px;
 }
 
-#search-icon, #notification-icon {
+#search-icon, #notification-icon, #star-icon, #eye-icon, #source-icon {
     fill: black;
     width: 28px;
 }
